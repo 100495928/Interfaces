@@ -390,23 +390,31 @@
     <!-- Pantalla 6 -->
     <div class="pantalla_6">
         <h1 id="pantalla_6" class="titulo">Llama a Papa Noel</h1>
+        <p class="parrafo_pantalla_6">¿Quieres hablar con Papa Noel, y pedirle los regalos que siempre has querido? 
+            ¡Llamale y cuéntale tus deseos para Navidad! Haz clic en el botón para iniciar la videollamada.</p>
+            
         <button id="iniciarBtn" class="boton_videollamada">Llamar a Papá Noel</button>
         <div id="popupVideollamada" class="popup-videollamada" style="display: none;">
             <div class="popup-content">
-                <h1 class="titulo_videollamada">Videollamada</h1>
-                <div class="videollamada-container">
-                    <div class="video-externo">
-                        <video id="videoSimulado" autoplay loop muted>
-                            <source src="images/papa_noel.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="video-local">
-                        <video id="videoLocal" autoplay></video>
-                    </div>
+                <div id="pantallaCarga" class="pantalla-carga">
+                    <img src="images/load.png" alt="Cargando..." class="imagen-carga">
+                    <p>Conectando con Papá Noel...</p>
                 </div>
-                <div class="videollamada-controles">
-                    <button id="colgarBtn" class="boton_videollamada"> Colgar </button>
-                </div>
+                 <div id="pantallaVideollamada" class="pantalla-videollamada" style="display: none;">
+                    <h1 class="titulo_videollamada">Videollamada</h1>
+                    <div class="videollamada-container">
+                        <div class="video-externo">
+                            <video id="videoSimulado" autoplay loop muted>
+                                <source src="images/papa_noel.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-local">
+                            <video id="videoLocal" autoplay></video>
+                        </div>
+                    </div>
+                    <div class="videollamada-controles">
+                        <button id="colgarBtn" class="boton_videollamada"> Colgar </button>
+                    </div>
             </div>
         </div>
     </div>

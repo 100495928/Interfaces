@@ -1309,7 +1309,14 @@ video {
     justify-content: center;
     background-size: 100vw 100vh;
 }
-
+.parrafo_pantalla_6 {
+    text-align: center;
+    color: black;
+    font-size: 4vh;
+    font-family: Cinzel, serif;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
 .pantalla_inicial {
     display: flex;
     flex-direction: column;
@@ -1362,3 +1369,30 @@ video {
 .boton_videollamada:hover {
     background-color: #ff1c1c;
 }
+
+/* Pantalla de carga */
+.pantalla-carga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.imagen-carga {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    animation: giro 2s linear infinite; /* Animación de giro */
+}
+
+@keyframes giro {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+

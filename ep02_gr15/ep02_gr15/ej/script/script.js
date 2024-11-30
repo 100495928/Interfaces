@@ -902,23 +902,33 @@ function resetGame_2() {
 document.getElementById("boton_juego_2").addEventListener("click", resetGame_2);
 startGame_2();
 
-/* Videollamada */
 document.addEventListener("DOMContentLoaded", () => {
     const iniciarBtn = document.getElementById("iniciarBtn");
     const popupVideollamada = document.getElementById("popupVideollamada");
+    const pantallaCarga = document.getElementById("pantallaCarga");
+    const pantallaVideollamada = document.getElementById("pantallaVideollamada");
     const videoLocal = document.getElementById("videoLocal");
     const colgarBtn = document.getElementById("colgarBtn");
+
     iniciarBtn.addEventListener("click", () => {
-        navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-            .then(stream => {
-                popupVideollamada.style.display = "flex";
-                videoLocal.srcObject = stream;
-            })
-            .catch(error => {
-                console.error("Error al acceder a la cámara: ", error);
-                alert("No se pudo acceder a la cámara. Verifica los permisos.");
-            });
+        popupVideollamada.style.display = "flex";
+        pantallaCarga.style.display = "flex";
+        pantallaVideollamada.style.display = "none";
+        // Esperar 5 segundos y luego iniciar la videollamada
+        setTimeout(() => {
+            pantallaCarga.style.display = "none";
+            pantallaVideollamada.style.display =  "inline-block";
+            navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+                .then(stream => {
+                    videoLocal.srcObject = stream;
+                })
+                .catch(error => {
+                    console.error("Error al acceder a la cámara: ", error);
+                    alert("No se pudo acceder a la cámara. Verifica los permisos.");
+                });
+        }, 5000); 
     });
+
     colgarBtn.addEventListener("click", () => {
         const tracks = videoLocal.srcObject?.getTracks();
         if (tracks) {
