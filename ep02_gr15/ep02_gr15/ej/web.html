@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="images/barba.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navidad</title>
+    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+</head>
+
+<body>
+    <!-- Pantalla 1 -->
+    <div class="pantalla_1" id="pantalla_1">
+        <header>
+            <div class="dropdown">
+                <img src="images/ajustes.png" alt="menu" class="menu-img">
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#pantalla_1">Home</a></li>
+                        <li><a href="#pantalla_2"> Noel</a></li>
+                        <li><a href="#pantalla_3">Las cartas</a></li>
+                        <li><a href="#pantalla_4">Envía tu carta</a></li>
+                        <li><a href="#pantalla_5">Juega!</a></li>
+                        <li><a href="#pantalla_6">Llama a Papa Noel</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1 class="titulo_header" id="titulo_header">Navidad</h1>
+            <div class="botones">
+                <div class="boton ml2 mr2 popup" id="boton_iniciar_sesion">Iniciar sesión
+                    <div class="modal-overlay" id="modalOverlay_inicio"></div>
+                    <div class="popup-content-inner">
+                        <span class="popuptext inicio_sesion" id="Popup_iniciar_sesion">
+                            <div class="celda_popup">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre_sesion" name="nombre">
+                            </div>
+                            <div class="celda_popup">
+                                <label for="contraseña">Contrasena:</label>
+                                <input type="text" id="contraseña_sesion" name="contraseña">
+                            </div>
+                            <span class="close" onclick="closePopupSesion()">&times;</span>
+                            <div class="celda_popup">
+                                <button class="boton_popup" id="btnAceptar_inicio">Iniciar sesión</button>
+                                <button class="boton_popup" id="btnCancelar_inicio">Cancelar</button>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="boton mr2 popup" id="boton_registrar">Registrar
+                    <div class="modal-overlay" id="modalOverlay_registro"></div>
+                    <div class="popup-content_inner">
+                        <span class="popuptext registro" id="Popup_registro">
+                            <div class="celda_popup">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre_r" name="nombre">
+                            </div>
+                            <div class="celda_popup">
+                                <label for="contraseña">Contrasena:</label>
+                                <input type="text" id="contraseña_r" name="contraseña">
+                            </div>
+                            <div class="celda_popup">
+                                <label for="Repetir contraseña">Repetir contraseña:</label>
+                                <input type="text" id="repetir-contraseña_r" name="Repetircontraseña">
+                            </div>
+                            <div class="celda_popup">
+                                <label for="mail">Correo electrónico:</label>
+                                <input type="email" id="mail_r" name="mail">
+                            </div>
+                            <div class="celda_popup">
+                                <label for="ciudad">Ciudad:</label>
+                                <input type="text" id="ciudad_r" name="ciudad">
+                            </div>
+                            <div class="celda_popup">
+                                <label for="pais">País:</label>
+                                <input type="text" id="pais_r" name="pais">
+                            </div>
+                            <div class="celda_popup">
+                                <label for="genero">Género:</label>
+                                <select id="genero_r" name="genero" class="celda_popup_input">
+                                    <option value="masculino">Masculino</option>
+                                    <option value="femenino">Femenino</option>
+                                    <option value="otro">Otro</option>
+                                    <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                                </select>
+                            </div>
+                            <div class="celda_popup">
+                                <label for="Hijos">Nº de hijos:</label>
+                                <input type="number" id="hijos_r" name="hijos">
+                            </div>
+                            <div id="hijos-container"></div>
+                            <span class="close" onclick="closePopup()">&times;</span>
+                            <div class="celda_popup">
+                                <button id="btnAceptar_registro" class="boton_popup">Aceptar</button>
+                                <button id="btnCancelar_registro" class="boton_popup">Cancelar</button>
+                                <button id="btnLimpiar_registro" class="boton_popup">Limpiar campos</button>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <span class="perfil_usuario" id="perfil_usuario">
+                <div id="menu_perfil">
+                    <ul>
+                        <li><a id="mi_perfil" class="popup">Mi perfil
+                                <div class="modal-overlay" id="modalOverlay_mi_perfil"></div>
+                                <div class="popup-content-inner">
+                                    <span class="popuptext perfil" id="popup_mi_perfil">
+                                        <div class="celda_popup">
+                                            <label for="nombre">Nombre:</label>
+                                            <input type="text" id="nombre_perfil" name="nombre">
+                                        </div>
+                                        <div class="celda_popup">
+                                            <label for="contraseña">Contrasena:</label>
+                                            <input type="text" id="contraseña_perfil" name="contraseña">
+                                        </div>
+                                        <div class="celda_popup">
+                                            <label for="mail">Correo electrónico:</label>
+                                            <input type="email" id="mail_perfil" name="mail">
+                                        </div>
+                                        <div class="celda_popup">
+                                            <label for="ciudad">Ciudad:</label>
+                                            <input type="text" id="ciudad_perfil" name="ciudad">
+                                        </div>
+                                        <div class="celda_popup">
+                                            <label for="pais">País:</label>
+                                            <input type="text" id="pais_perfil" name="pais">
+                                        </div>
+                                        <div class="celda_popup">
+                                            <label for="genero">Género:</label>
+                                            <select id="genero_perfil" name="genero" class="celda_popup_input">
+                                                <option value="masculino">Masculino</option>
+                                                <option value="femenino">Femenino</option>
+                                                <option value="otro">Otro</option>
+                                                <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                                            </select>
+                                        </div>
+                                        <div class="celda_popup">
+                                            <label for="Hijos">Nº de hijos:</label>
+                                            <input type="number" id="hijos_perfil" name="hijos">
+                                        </div>
+                                        <div id="hijos-container_perfil"></div>
+                                        <div class="celda_popup">
+                                            <button id="btnAceptar_perfil" class="boton_popup">Aceptar</button>
+                                            <button id="btnCancelar_perfil" class="boton_popup">Cancelar</button>
+                                            <button id="btnLimpiar_perfil" class="boton_popup">Limpiar campos</button>
+                                        </div>
+                                    </span>
+                                </div>
+                            </a></li>
+                        <li><a id="mis_cartas" class="popup">Mis Cartas
+                                <div class="modal-overlay" id="modalOverlay_mis_cartas"></div>
+                                <div class="popup-content_inner">
+                                    <span class="popuptext mis_cartas" id="popup_mis_cartas"></span>
+                                </div>
+                            </a></li>
+                        <li><a id="cerrar_sesion">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </span>
+        </header>
+        <h2 class="titulo_pantalla_1">SIGUE A PAPA NOEL</h2>
+        <p class="parrafo_pantalla_1">Quedan
+            <span id="days"></span> días <span id="hours"></span> horas <span id="minutes"></span> minutos <span
+                id="seconds"></span> segundos
+        </p>
+        <button class="boton boton_empezar_p1">Empezar</button>
+    </div>
+
+    <!-- Pantalla 2 -->
+    <div class="pantalla_i">
+        <h1 id="pantalla_2" class="titulo">Papa Noel</h1>
+        <div class="flex-container-texto">
+            <div>
+                <img class="img1" src="images/santa-158092_1280.png" alt="renos">
+                <p class="texto_noel">
+                    Papá Noel, conocido también como Santa Claus (en neerlandés: Sinterklaas), Viejito Pascuero,9
+                    Colacho,10 San Nicolás11​ o simplemente Santa, es un personaje legendario12​ originario del
+                    cristianismo occidental, conocido por repartir regalos a niños durante las noches de Nochebuena y
+                    Navidad (24 y 25 de diciembre). Estos regalos pueden contener juguetes, golosinas, carbón o
+                    simplemente nada, dependiendo de si el infante se encuentra en la «lista de niños buenos o
+                    malos».13​14​ Según la leyenda, Papá Noel fabrica los regalos con ayuda de sus elfos, con los que
+                    trabaja en su taller, repartiendo los regalos con ayuda de sus renos que tiran de su trineo por el
+                    aire.15​16​
+                    El personaje de Papá Noel está inspirado en tradiciones folclóricas destacadas de personajes como
+                    Nicolás de Bari (como también de su versión legendaria húngara, Mikulás)17​18​ por parte del
+                    folclore europeo,19​ la personificación de la Navidad según el folclore inglés de Papá Noel, y la
+                    figura neerlandesa de Sinterklaas</p>
+            </div>
+        </div>
+
+        <div class="margen">
+            <img class="img3" src="images/saint-nicolas-145343_640.png" alt="Papá Noel Grande">
+
+            <img class="img2" src="images/saint-nicolas-145343_640.png" alt="reno">
+            <p class="texto_noel">
+                La idea de los ocho primeros renos, se dice que habría surgido de una antigua leyenda de la mitología
+                escandinava, sobre el dios Odín, quien montaba un caballo de ocho patas llamado Sleipnir. Igualmente en
+                sus orígenes, un caballo blanco (llamado Amerigo) era el encargado de llevar a San Nicolás y a un
+                ayudante, llamado Zwarte Piet en holandés, (Pedro Carbonilla o, literalmente, Pedro el Negro). Tanto el
+                caballo como Black Peter, posteriormente desaparecerían de la tradición anglosajona o se fusionarían</p>
+        </div>
+    </div>
+
+    <!-- Pantalla 3 -->
+    <div class="pantalla_i">
+        <h1 id="pantalla_3" class="titulo">Las cartas</h1>
+        <div class="flex-container-carta">
+            <!-- Caja 1 -->
+            <div class="caja-carta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="img-carta" src="images/Niña_3.jpeg" alt="Foto de quien envía">
+                        <p>Francisca</p>
+                        <p>Londres</p>
+                        <p>Inglaterra</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Carta de Francisca</p>
+                        <p>Querido Papá Noel, este año he sido muy buena. He ayudado a mamá a poner la mesa y siempre
+                            recojo mis juguetes. Me gustaría pedirte una muñeca que hable y camine, y también un juego
+                            de té para jugar con mis amigas. Si puedes, trae algo de chocolate también, ¡me encantan!
+
+                            Espero que estés bien en el Polo Norte y que tus renos estén listos para volar. ¡Les dejo
+                            galletas y leche bajo el árbol!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 2 -->
+            <div class="caja-carta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="img-carta" src="images/Niño_1.jpeg" alt="Foto de quien envía">
+                        <p>Pedro</p>
+                        <p>Albacete</p>
+                        <p>España</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Carta de Pedro</p>
+                        <p>Querido Papá Noel, este año ha sido divertido, he sacado buenas notas en la escuela y ayudé a
+                            mi hermana con su tarea de matemáticas. Quiero pedirte un videojuego nuevo que se llama
+                            "Aventura Espacial", porque me gustan los juegos de ciencia ficción. También me gustaría un
+                            balón de fútbol, porque el que tengo ya está muy viejo. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 3 -->
+            <div class="caja-carta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="img-carta" src="images/Niña_4.jpeg" alt="Foto de quien envía">
+                        <p>Valentina</p>
+                        <p>La Paz</p>
+                        <p>Bolivia</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Carta de Valentina</p>
+                        <p>Mi nombre es Valentina. ¿Cómo estás? Yo estoy muy emocionada por Navidad. Este año he sido
+                            muy buena. Quiero pedirte un perrito de peluche que sea suavecito y también una casa para
+                            mis muñecas. Me encantaría que la casa tuviera una cocina y una cama grande.
+
+                            Te prometo que voy a compartir mis regalos con mi hermanito. Espero que te gusten las
+                            galletas que te vamos a dejar en Nochebuena.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 4 -->
+            <div class="caja-carta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="img-carta" src="images/Niño_5.jpeg" alt="Foto de quien envía">
+                        <p>Amari</p>
+                        <p>Casablanca</p>
+                        <p>Marruecos</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Carta de Amari</p>
+                        <p>Querido Papá Noel, he aprendido a andar en bicicleta sin rueditas y he sido muy amable con
+                            mis amigos. Para esta Navidad, me gustaría mucho tener una bici nueva de color rosa con una
+                            canasta para llevar a mi muñeca. También quiero pedirte una varita mágica de juguete para
+                            jugar a ser una hada.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 5 -->
+            <div class="caja-carta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="img-carta" src="images/Niño_6.jpeg" alt="Foto de quien envía">
+                        <p>Antonio</p>
+                        <p>Cáceres</p>
+                        <p>España</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Carta de Antonio</p>
+                        <p>Querido Papá Noel, este año he sido mejor que el año pasado, lo prometo. He hecho mis tareas
+                            y he tratado de no pelear con mi hermano. Para Navidad me gustaría un set de Lego de Star
+                            Wars, porque me encanta armar cosas y también soy fan de las películas. También, si puedes,
+                            me gustaría un libro de aventuras.
+
+                            Sé que estás ocupado, pero te agradezco por leer mi carta. ¡Te deseo un buen viaje la noche
+                            de Navidad!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 6 -->
+            <div class="caja-carta">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="img-carta" src="images/santa.jpg" alt="Foto de quien envía">
+                        <p>Messi</p>
+                        <p>Rosario</p>
+                        <p>Argentina</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Carta de Messi</p>
+                        <p>Querido Papá Noel, sé que ya no soy un nene, pero nunca es tarde para escribirte. Este año
+                            fue increíble con lo del Mundial, pero igual te quiero pedir algunas cosas.
+
+                            Primero, que sigas cuidando a mi familia, que es lo más importante para mí. Para mí solo
+                            pido fuerzas para seguir disfrutando del fútbol un poco más, y que los pibes y pibas sigan
+                            persiguiendo sus sueños, en el fútbol o lo que les guste.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla 4 -->
+    <div class="pantalla_4">
+        <h1 id="pantalla_4" class="titulo">Envía tu carta</h1>
+        <div class="margen_carta">
+            <div class="flex-container">
+                <div class="celda">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre_carta" name="nombre" required>
+                </div>
+                <div class="celda">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email_carta" name="email" required>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="celda">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" id="ciudad_carta" name="ciudad" required>
+                </div>
+                <div class="celda">
+                    <label for="pais">País</label>
+                    <input type="text" id="pais_carta" name="pais" required>
+                </div>
+            </div>
+            <div class="celda">
+                <label for="carta">Carta para Papá Noel</label>
+                <textarea id="carta" name="carta" required></textarea>
+            </div>
+            <div class="celda">
+                <button class="boton" id="boton_carta">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <!-- Pantalla 5 -->
+    <h1 id="pantalla_5" class="titulo">Juega!</h1>
+    <div class="pantalla_5">
+        <div class="botones_juego">
+            <a href="#news1" id="boton_juego_1">Juego 1</a>
+            <a href="#news2" id="boton_juego_2">Juego 2</a>
+            <a href="#news3">Juego 3</a>
+        </div>
+        <div id="news1" class="imagen_juego">
+            <div class="gameArea" id="gameArea">
+                <div id="circle"></div>
+            </div>
+            <div id="scoreboard">
+                <h2>Puntuación: <span id="score">0</span></h2>
+                <h2>Tiempo restante: <span id="time">90</span> segundos</h2>
+            </div>
+        </div>
+        <div id="news2" class="imagen_juego">
+            <div id="game-board" class="board"></div>
+            <p class="texto_juego_2">Movimientos: <span id="moves">0</span></p>
+        </div>
+        <div id="news3" class="imagen_juego">
+            <img src="images/Juego_5.jpeg" alt="Juego 3">
+        </div>
+    </div>    
+    <!-- Pantalla 6 -->
+    <h1 id="pantalla_6" class="titulo">Llama a Papa Noel</h1>
+    <div class="pantalla_inicial">
+        <button id="iniciarBtn" class="boton_videollamada">Llamar a Papá Noel</button>
+    </div>
+    <div id="popupVideollamada" class="popup-videollamada" style="display: none;">
+        <div class="popup-content">
+            <h1 class="titulo_videollamada">Videollamada</h1>
+            <div class="videollamada-container">
+                <div class="video-externo">
+                    <video id="videoSimulado" autoplay loop muted>
+                        <source src="images/papa_noel.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-local">
+                    <video id="videoLocal" autoplay></video>
+                </div>
+            </div>
+            <div class="videollamada-controles">
+                <button id="colgarBtn" class="boton_videollamada"> Colgar </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-seccion">
+                <p>&copy; 2024 Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-seccion">
+                <a class="footer-enlace" href="https://www.uc3m.es/Inicio">Preguntas frecuentes</a>
+                <a href="mailto:100495949@alumnos.uc3m.es?Subject=Aquí%20el%20asunto%20del%20mail">Contacto</a>
+            </div>
+            <div class="footer-seccion redes-sociales">
+                <a href="https://instagram.com" target="_blank" class="social-link">
+                    <img src="images/instagram-icon.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-link">
+                    <img src="images/twitter-logo.png" alt="Twitter" class="social-icon">
+                </a>
+                <a href="https://facebook.com" target="_blank" class="social-link">
+                    <img src="images/facebook.png" alt="Twitter" class="social-icon">
+                </a>
+                <a href="https://github.com" target="_blank" class="social-link">
+                    <img src="images/github.png" alt="Twitter" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="script/script.js"></script>   
+</body>

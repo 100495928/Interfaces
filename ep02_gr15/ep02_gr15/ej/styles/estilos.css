@@ -1,0 +1,1365 @@
+.ml2 {
+    margin-left: 2vw;
+}
+
+.mr2 {
+    margin-right: 2vw;
+}
+
+.mb1 {
+    margin-bottom: 1vh;
+}
+
+body {
+    display: block;
+    margin: 0px;
+    padding: 0;
+    background-image: url("../images/christmas-bauble-1079926_1280.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.pantalla_i {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: column;
+}
+
+#pantalla_2,
+#pantalla_3,
+#pantalla_4,
+#pantalla_5 {
+    padding-top: 15vh;
+}
+
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boton {
+    background-color: #111111;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 3vh;
+}
+
+.titulo {
+    text-align: center;
+    color: #050505;
+    margin: 0;
+    font-size: 10vh;
+    font-family: Lora, serif;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.flex-container .celda {
+    flex: 1;
+    margin-bottom: 50px;
+}
+
+.texto_noel {
+    font-family: Mountains of Christmas, cursive;
+    color: black;
+    font-size: 100vw;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
+
+/*Pantalla 1*/
+
+.pantalla_1 {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/fondo_p1.jpg");
+    background-size: 100vw 100vh;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("../images/christmas-background-4621177_640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 3vw 5vw;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.titulo_header {
+    font-family: 'Fauna One', serif;
+    width: 0%;
+    font-size: 8vh;
+    color: #ffffff;
+}
+
+.titulo_pantalla_1 {
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 10vh;
+    font-family: 'Fauna One', serif;
+}
+
+.parrafo_pantalla_1 {
+    text-align: center;
+    color: white;
+    font-size: 4vh;
+    font-family: Cinzel, serif;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.boton_empezar_p1 {
+    font-family: Cinzel, serif;
+    display: block;
+    margin: 0 auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 15vw;
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    left: 4vh;
+}
+
+.dropdown-content li {
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 0.5vh;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    font-size: 3.5vh;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-img {
+    width: 10vh;
+    height: auto;
+    object-fit: contain;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.popup-content_inner {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    height: auto;
+    overflow-y: auto;
+}
+
+.popup .popuptext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    background-color: #f3f3f3;
+    color: #000000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.popup .inicio_sesion {
+    width: 30vw;
+    height: 30vh;
+}
+
+.popup .registro {
+    width: 70vw;
+    height: 70vh;
+}
+
+.popup .perfil {
+    width: 50vw;
+    height: 60vh;
+}
+
+.popup .mis_cartas {
+    width: 90vw;
+    height: 80vh;
+}
+
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+.celda_popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-top: 3vh;
+}
+
+.celda_popup label {
+    margin-right: 3vw;
+    font-weight: bold;
+    font-size: 3vh;
+    flex: 0 0 30%;
+    text-align: right;
+    color: black;
+}
+
+.celda_popup input[type="text"],
+.celda_popup input[type="number"],
+.celda_popup input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    min-height: 2vh;
+    flex: 1;
+    color: black;
+}
+
+.celda_popup_input {
+    width: 100%;
+    padding: 5px;
+    min-height: 2vh;
+    flex: 1;
+    border: 2px solid black;
+}
+
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: animatetop 1s;
+    animation: animatetop 1s;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid black;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(133, 132, 132, 0.5);
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.modal-overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.boton_popup {
+    background-color: #111111;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 2vh;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+#menu_perfil {
+    display: none;
+    top: 10vh;
+    right: 1vh;
+    height: auto;
+    min-width: 15vw;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+}
+
+#menu_perfil ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu_perfil a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#menu_perfil li {
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 1vh;
+}
+
+#menu_perfil a:hover {
+    font-size: 3.5vh;
+}
+
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 300;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 300;
+        opacity: 1
+    }
+}
+
+.perfil_usuario {
+    background-image: url("../images/perfil.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    top: 1vh;
+    right: 5vh;
+    width: 10vh;
+    height: 10vh;
+}
+
+/*Pantalla 2*/
+.margen {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.flex-container-texto {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    padding: 1em;
+}
+
+.flex-container-texto .margen {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.img1 {
+    display: none;
+    width: 70%;
+    height: 50%;
+}
+
+.img2 {
+    display: none;
+    width: 40%;
+    height: 50%;
+}
+
+.img3 {
+    display: block;
+    margin-left: 0;
+    width: 20%;
+    height: 60vh;
+}
+
+.texto_noel {
+    font-size: 3vw;
+    flex: 1;
+    font-family: Ubuntu, sans-serif;
+}
+
+
+/*Pantalla 3*/
+.caja-carta {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 20px;
+    width: 25vw;
+    height: 50vh;
+    perspective: 1000px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.caja-carta:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: rgb(235, 233, 233);
+    background-image: url("../images/stamp-2338306_1280.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 2vh;
+}
+
+.flip-card-back {
+    background-image: url("../images/wedding-letter-7375738_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+    font-size: 2vh
+}
+
+
+.flex-container-carta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-container-carta .caja-carta {
+    flex-basis: 25%;
+    margin: 15px;
+}
+
+.img-carta {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.delete-button {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    color: rgb(3, 3, 3);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    z-index: 99999;
+}
+
+/*Pantalla 4*/
+
+.pantalla_4 {
+    display: block;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: column;
+}
+
+.margen_carta {
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.celda {
+    margin-bottom: 50px;
+    min-height: 10vh;
+}
+
+.celda label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.celda input[type="text"],
+.celda input[type="email"] {
+    width: 80%;
+    padding: 5px;
+    min-height: 2vh;
+}
+
+.celda textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6d6c6c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 150px;
+    resize: vertical;
+    min-height: 30vh;
+}
+
+/*Pantalla 5*/
+
+.pantalla_5 {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: -150px;
+}
+
+.botones_juego {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.botones_juego .boton:hover {
+    transform: scale(1.1);
+}
+
+.botones_juego a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 2vh;
+    background-color: #111111;
+    color: #fff;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 5vh;
+    border-radius: 3vh;
+}
+
+.botones_juego .boton {
+    font-size: 5vh;
+    border-radius: 3vh;
+}
+
+.imagen_juego {
+    width: 130vh;
+    height: 130vh;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.imagen_juego img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#news0 {
+    display: block;
+}
+
+#news1,
+#news2,
+#news3 {
+    display: none;
+}
+
+#news0:target {
+    display: none;
+}
+
+#news1:target,
+#news2:target,
+#news3:target {
+    display: block;
+}
+
+#gameArea {
+    position: relative;
+    width: 60vh;
+    height: 60vh;
+    background-image: url("../images/fondo_juego.jpeg");
+    background-size: cover;
+    margin-top: 30vh;
+    overflow: hidden;
+    margin-left: 20vh;
+    border: 5px solid #0a0a0a;
+    border-radius: 10vh;
+    box-shadow: 0 0 10px #000;
+}
+
+#circle {
+    position: absolute;
+    width: 15vh;
+    height: 15vh;
+    background-image: url("../images/bola_juego.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+#scoreboard {
+    margin-left: 20vh;
+}
+
+
+/*Juego 2*/
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin: 20px;
+    justify-content: center;
+    margin-top: 30vh;
+    margin-right: 30vh;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(180, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.card.flip img {
+    display: block;
+}
+
+.card.matched {
+    background-color: #32cd32;
+    cursor: default;
+}
+
+.texto_juego_2{
+    font-size: 5vh;
+    margin-left: 20vh;
+    margin-top: 5vh;
+}
+
+
+/*footer*/
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 15vh;
+    z-index: 9998;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100vw;
+}
+
+.footer-seccion {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.footer-seccion a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1vw;
+}
+
+.footer-seccion a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+}
+
+.social-link {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 3vw;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        background-image: url("../images/christmas-bauble-1079926_1280.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .pantalla_1 {
+        background-image: none;
+    }
+
+    .titulo_pantalla_1 {
+        color: black;
+        font-size: 8vh;
+    }
+
+    .parrafo_pantalla_1 {
+        color: black;
+        font-size: 3vh;
+    }
+
+    .dropdown-content {
+        min-width: 45vw;
+
+    }
+
+    .flex-container-carta.caja-carta {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    .flex-container-carta {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .caja-carta {
+        min-height: 300px;
+        min-width: 40vh;
+    }
+
+    .flip-card-front {
+        min-height: 300px;
+    }
+
+    .flip-card-back {
+        min-height: 300px;
+    }
+
+    #pantalla_2 {
+        margin-top: -20vh;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .boton {
+        margin: 5px;
+        font-size: 1.5vh;
+    }
+
+    .celda .boton {
+        font-size: 2vh;
+    }
+
+    .titulo_header {
+        font-size: 4vh;
+        width: 20%;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .margen {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .img1,
+    .img2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img3 {
+        display: none;
+        margin: 0;
+    }
+
+    .pantalla_5 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botones_juego {
+        width: 70%;
+        margin-top: 30vh;
+        margin-left: 25vw;
+    }
+
+    .botones_juego a {
+        width: 50%;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .imagen_juego {
+        width: 80%;
+        height: 50%;
+        margin-top: 5vh;
+        margin: 10px auto;
+    }
+
+    #news1,
+    #news2,
+    #news3 {
+        padding-top: 5vh;
+    }
+
+    .footer {
+        min-height: auto;
+    }
+
+    .footer-contenido {
+        flex-wrap: wrap;
+    }
+
+    .footer-seccion {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .social-icon {
+        width: 5vw;
+        height: auto;
+    }
+
+
+    #gameArea {
+        width: 30vh;
+        height: 30vh;
+        margin-top: 5vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #circle {
+        width: 8vh;
+        height: 8vh;
+    }
+
+    #scoreboard {
+        margin-left: 0;
+        text-align: center;
+        font-size: 2vh;
+    }
+
+    .inicio_sesion {
+        min-width: 80vw;
+        min-height: 30vh;
+    }
+
+    .registro {
+        min-width: 80vw;
+        min-height: 80vh;
+    }
+
+    .inicio_sesion {
+        min-width: 80vw;
+        min-height: 30vh;
+    }
+
+    .registro {
+        min-width: 80vw;
+        min-height: 80vh;
+    }
+
+    .perfil_usuario {
+        background-image: url("../images/perfil.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        top: 2vh;
+        right: 2vh;
+        width: 7vh;
+        height: 7vh;
+    }
+
+    #menu_perfil {
+        width: 30vw;
+        background-color: #0c0c0c;
+    }
+
+    #menu_perfil a {
+        color: white;
+    }
+
+    .popup .perfil {
+        width: 80vw;
+        height: 70vh;
+    }
+
+    .board {
+        grid-template-columns: repeat(4, 80px); 
+        gap: 8px;
+        width: 100%;
+        margin-top: 0vh;
+        margin-left: 0vh;
+    }
+
+    .card {
+        width: 60px;
+        height: 60px;
+    }
+
+    .texto_juego_2{
+        font-size: 4vh;
+        margin-left: 0vh;
+    }
+
+
+
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+
+    body {
+        background-image: url("../images/christmas-bauble-1079926_1280.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .pantalla_1 {
+        background-image: none;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .boton {
+        margin: 5px;
+        font-size: 2vh;
+    }
+
+    .dropdown-content {
+        min-width: 35vw;
+    }
+
+    .titulo_header {
+        font-size: 5vh;
+        width: 20%;
+    }
+
+    .titulo_pantalla_1 {
+        color: black;
+        font-size: 10vh;
+    }
+
+    .parrafo_pantalla_1 {
+        color: black;
+        font-size: 3vh;
+    }
+
+    #pantalla_2 {
+        margin-top: -10vh;
+    }
+
+    .margen {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .img1,
+    .img2 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .img3 {
+        display: none;
+        margin: 0;
+    }
+
+    .flex-container-carta.caja-carta {
+        flex-basis: 50%;
+        margin: 10px 0;
+    }
+
+    .flex-container-carta {
+        margin-top: 30px;
+        align-items: center;
+    }
+
+
+    .caja-carta {
+        min-height: 250px;
+        min-width: 37vw;
+    }
+
+    .flip-card-front {
+        min-height: 225px;
+    }
+
+    .flip-card-back {
+        min-height: 225px;
+    }
+
+    .pantalla_5 {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .botones_juego {
+        width: 50%;
+        margin-top: 30vh;
+    }
+
+    .botones_juego a {
+        width: 90%;
+        margin: 10px 0;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    .imagen_juego {
+        width: 80%;
+        height: 50%;
+        margin: 10px auto;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-contenido {
+        flex-wrap: wrap;
+    }
+
+    .footer-seccion {
+        text-align: center;
+    }
+
+    .social-icon {
+        width: 5vw;
+        height: auto;
+    }
+
+    #news1,
+    #news2,
+    #news3 {
+        padding-top: 15vh;
+    }
+
+    #gameArea {
+        width: 45vh;
+        height: 45vh;
+        margin-top: -10vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #circle {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    #scoreboard {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 2.5vh;
+    }
+
+    .inicio_sesion {
+        min-width: 60vw;
+        min-height: 30vh;
+    }
+
+    .registro {
+        min-width: 80vw;
+        min-height: 80vh;
+    }
+
+    .perfil_usuario {
+        background-image: url("../images/perfil.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        top: 2vh;
+        right: 2vh;
+        width: 7vh;
+        height: 7vh;
+    }
+
+    #menu_perfil {
+        width: 30vw;
+        background-color: #0c0c0c;
+    }
+
+    #menu_perfil a {
+        color: white;
+    }
+
+    .popup .perfil {
+        width: 80vw;
+        height: 70vh;
+    }
+
+    .popup .mis_cartas {
+        width: 95vw;
+    }
+
+    .board {
+        grid-template-columns: repeat(4, 80px); 
+        gap: 8px;
+        width: 100%;
+        margin-top: -10vh;
+        margin-left: 0vh;
+    }
+
+    .card {
+        width: 60px;
+        height: 60px;
+    }
+
+    .texto_juego_2{
+        font-size: 4vh;
+        margin-left: 0vh;
+    }
+
+    .boton_videollamada {
+        padding: 10px 20px;
+        background-color: #ff5757;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+}
+
+/* Videollamada */
+
+
+.videollamada-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.video-externo, .video-local {
+    flex: 1;
+    position: relative;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 300px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.videollamada-controles {
+    margin-top: 20px;
+}
+.pantalla_6 {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/fondo_p1.jpg");
+    background-size: 100vw 100vh;
+}
+
+.pantalla_inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.titulo_videollamada {
+    text-align: center;
+    color: #ece0e0;
+    margin: 0;
+    font-size: 7vh;
+    font-family: Lora, serif;
+}
+.popup-videollamada {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    background-image: url("../images/christmas-background-4621177_640.jpg");
+}
+
+.boton_videollamada {
+    background-color: #111111;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.boton_videollamada:hover {
+    background-color: #ff1c1c;
+}

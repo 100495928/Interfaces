@@ -1,0 +1,12 @@
+Álvaro García Piqueras 100495760@alumnos.uc3m.es
+Mario Collazo Naranjo 100495949@alumnos.uc3m.es
+
+En este documento vamos a explicar el uso de inteligencia artificial en nuestro trabajo.
+Hemos utilizado inteligencia artificial para conseguir las fotos que usamos para los juegos.
+Adicionalmente hemos utilizado puntualmente la inteligencia artificial en la implementacion de las funciones lógicas de 
+los juegos y en el uso del local storage(acceder, comprobar datos, escribir...).
+En general se ha hecho uso de W3Schools.com y páginas web externas.
+
+Hemos intentado agregar drag and drop en moviles y tablet, pero no lo hemos conseguido debido al formato de nuestras
+cartas, nos hemos planteado implementar botones para mover las cartas a izquierda y derecha, pero no nos ha sido funcional
+debido a que los cambios afectaban al drag and drop de el ordenador, y hemos priorizado que funcione al menos en ordenador.
